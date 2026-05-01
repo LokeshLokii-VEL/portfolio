@@ -965,7 +965,7 @@ body > hr {
   background: #F8B400;
   border-radius: 30px;
   transition: 0.3s;
-  width: 380px;        /* wider */
+  width: 300px;        /* wider */
   height: 220px;       /* shorter */
   display: flex;
   flex-direction: column;
