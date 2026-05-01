@@ -894,17 +894,25 @@ body > hr {
 
     /* Fix Navbar */
     .navbar {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px 15px;
-        gap: 5px;
+        gap: 8px;
     }
 
-    .navbar a {
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links a {
         font-size: 13px;
     }
 
-    .logo {
-        font-size: 18px;
+    /* Hide contact me button in navbar */
+    .contact-me-btn {
+        display: none;
     }
 
     /* Fix Hero */
@@ -912,23 +920,52 @@ body > hr {
         flex-direction: column;
         padding: 20px 15px;
         text-align: left;
+        gap: 20px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
-    /* Fix Profile Image */
+    /* Fix Profile Image size */
     .hexagon {
-        width: 280px;
-        height: 280px;
+        width: 250px !important;
+        height: 250px !important;
         margin: 0 auto;
     }
 
-    .hexagon img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    /* Fix Skills - 2 columns */
+    .skills-container {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-card h3 {
+        font-size: 14px;
+    }
+
+    /* Fix Projects - 1 column */
+    .projects-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fix About section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /* Fix Certificate - 1 column */
+    .certificate-container {
+        grid-template-columns: 1fr !important;
     }
 
     /* Fix HR line */
@@ -937,8 +974,14 @@ body > hr {
         margin-left: 0 !important;
     }
 
-    /* Fix Contact button */
-    .contact-me-btn {
-        display: none;
+    /* Fix Contact */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100% !important;
+        box-sizing: border-box;
     }
 }
