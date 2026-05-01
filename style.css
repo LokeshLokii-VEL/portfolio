@@ -993,6 +993,13 @@ body > hr {
   .skills-container{
     grid-template-columns: 1fr;
   }
+  .skills-container {
+  display: flex;
+  flex-direction: column;   /* stack info + form vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center text inside */
+  gap: 30px;                /* spacing between info and form */
+}
 }
 
 
