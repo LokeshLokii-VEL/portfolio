@@ -912,7 +912,32 @@ body > hr {
   .nav-links.active {
     display: flex;
   }
+  .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.about-content {
+  max-width: 600px;
+}
+
+
+}
+
 
 
 @media (max-width: 480px) {
@@ -928,8 +953,16 @@ body > hr {
 
 @media (max-width: 480px) {
   .skills-container {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.skill-card {
+  width: 90%;
+  max-width: 350px;
+}
+
 }
 
 
