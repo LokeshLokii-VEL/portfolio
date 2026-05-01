@@ -911,6 +911,7 @@ body > hr {
     flex-direction: column;
     width: 100%;
     background: white;
+    border-radius: 10px;
   }
   .nav-links.active {
     display: flex;
@@ -988,29 +989,10 @@ body > hr {
 }
 
 
-@media (max-width: 480px) {
-  .skills-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.skill-card {
-  background: #F8B400;
-  border-radius: 30px;
-  transition: 0.3s;
-  width: 300px;        /* wider */
-  height: 220px;       /* shorter */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: -30px;
-  padding-bottom: 60px;
-}
-
-
+@media (max-width: 768px) {
+  .skills-container{
+    grid-template-columns: 1fr;
+  }
 }
 
 
