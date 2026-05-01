@@ -905,15 +905,23 @@ body > hr {
 
     /* Fix Navbar */
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 15px;
+         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+.logo {
+        display: flex;
+        align-items: center;
         gap: 8px;
     }
 
-
     .hamburger {
-        display: block;
+        font-size: 28px;
+        order: 2;
     }
 
     .nav-links {
@@ -923,6 +931,8 @@ body > hr {
         gap: 10px;
         padding: 10px 0;
         list-style: none;
+        order:3;
+
     }
   
     .nav-links.active {
@@ -932,11 +942,15 @@ body > hr {
     .contact-btn {
         display: none;
     }
-    
+
     .nav-links a {
         font-size: 13px;
     }
-
+ .nav-links li a {
+        font-size: 20px !important;
+        padding: 8px 0 !important;
+        display: block;
+    }
     /* Hide contact me button in navbar */
     .contact-me-btn {
         display: none;
