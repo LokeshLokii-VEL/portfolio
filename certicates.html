@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Certificates</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <section class="certificates-page">
+    <h2>My Certificates</h2><br>
+    <p>These are the certificates I have earned.</p><br><br>
+
+    <div class="certificate-container">
+      <div class="certificate-card">
+        <h3>Java Programming</h3>
+        <img src="images/javacertify.jpeg" alt="Java Programming Certificate" class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      <div class="certificate-card">
+        <h3>C Programming</h3>
+        <img src="images/c program.jpeg" alt="Java Programming Certificate"  class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      <div class="certificate-card">
+        
+        <h3>Git & Github</h3>
+        <img src="images/git and github.png" alt="Git and Github Certificate"  class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      <div class="certificate-card">
+        <h3>Oracle certificate</h3>
+        <img src="images/oracle certificates.jpg" alt="AIML Internship Certificate"  class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      <div class="certificate-card">
+        <h3>Oracle AI</h3>
+        <img src="images/oracle AI.jpg" alt="Oracle AI Certificate"  class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      <div class="certificate-card">
+        <h3>AIML Internship</h3>
+        <img src="images/intern.jpeg" alt="AIML Internship Certificate" class="cert-img" onclick="openLightbox(this)">
+      </div>
+
+      
+    </div>
+
+    <br><br>
+    
+    
+
+    <a href="index.html">
+                   <button class="certificates-btn">Back to portfolio</button>
+               </a>
+  </section>
+    <script src="script.js"></script>
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:90vh; border-radius:10px;" onclick="event.stopPropagation()">
+</div>
+</body>
+</html>

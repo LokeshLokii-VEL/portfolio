@@ -1,0 +1,268 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("MVGB-vqV0Q57H_fvR");</script>
+</head>
+<body>
+
+ 
+  <header class="navbar">
+    <div class="logo">
+      <span class="circle"></span>
+      <h2>LOKESH E</h2>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+    </nav>
+
+    
+
+    <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+  Contact me
+</button>
+
+
+
+
+
+  </header>
+
+  
+  <section class="hero">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <h1>Hi, I am Lokesh E</h1><br>
+      <p id="tagline"  style="font-weight: bold;"></p><br>
+
+      <p class="desc">
+        A passionate BTech-IT student with hands-on experience in 
+        frontend development, UI/UX designing, and backend basics. 
+      </p>
+
+      <div class="buttons">
+        <button class="yellow-btn">Let's Connect</button>
+      </div>
+
+    
+
+
+
+    </div>
+
+    <!-- Right -->
+    <div class="hero-right">
+
+      <div class="hexagon">
+        <img src="images/loki.png" alt="profile">
+    </div>
+
+  </section>
+
+<hr style="border: 1px solid black; width:100%;margin:0;padding: 0;display: block;">
+
+<!-- About Section -->
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="images/loki.png" alt="About Me">
+            <h1><strong>LOKESH E</strong></h1>
+            <h2>BTech-Information Technology</h2>
+        </div>
+
+
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate BTech IT student, Frontend Developer, and UI/UX Designer 
+                focused on creating modern, responsive, and user-friendly digital experiences.
+            </p>
+
+            <p>
+                I enjoy turning ideas into real websites with clean code, creative design, 
+                and smooth user experiences.
+            </p>
+        <a href="files/resume.pdf" download="My_Resume.pdf">
+  <button class="download-btn">Download CV</button>
+</a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<hr style="border: 1px solid black; width:100%;margin:0;padding: 0;display: block;">
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+
+    <div class="skills-title">
+        <h2>My Skills</h2>
+        
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <img src="images/html.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <img src="images/css.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <img src="images/javas.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>UI/UX Design</h3>
+            <img src="images/uiux.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>Java</h3>
+            <img src="images/java.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>MySQL</h3>
+            <img src="images/mysql.png" alt="css Logo" class="skill-logo">
+        </div>
+
+        <div class="skill-card">
+            <h3>Git And Github</h3>
+            <img src="images/gittt.png" alt="css Logo" class="skill-logo">
+        </div>
+
+    </div>
+
+    
+
+
+
+</section>
+<hr style="border: 1px solid black; width:100%;margin:0;padding: 0;display: block;">
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+
+    <div class="projects-title">
+        <h2>My Projects</h2>
+        <p>Some of my recent works and creative projects.</p>
+    </div>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>Modern responsive personal portfolio using HTML, CSS & JavaScript.</p>
+               
+               
+               <a href="https://lokeshportfolio.com">
+                   <button class="project-btn">View Project</button>
+               </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+           
+            <div class="project-info">
+                <h3>UI/UX Design Project</h3>
+                <p>Designed a Hospital Management System with a clean and user-friendly UI/UX.
+Simplifies appointments, doctor scheduling, and patient record management.</p>
+                <a href="https://www.figma.com/proto/z6dIRFaOlPgGV0LxePSB5R/Hospital-Management-System?node-id=0-1&t=pDQ29hQ1qVlPrXyd-1">
+                   <button class="project-btn">View Project</button>
+               </a>
+            </div>
+        </div>
+
+    </div><br><br>
+
+</section>
+
+<hr style="border: 1px solid black; width:100%;margin:0;padding: 0;display: block;">
+<!-- Certificates Section -->
+<section class="certificates" id="certificates">
+
+    <div class="certificate-title">
+        <h2>My Certificates</h2><br>
+        <p>certifications I have earned.</p><br><br>
+        <a href="certicates.html">
+                   <button class="certificate-btn">View Certificates</button>
+               </a>
+    </div>
+</section>
+  <hr style="border: 1px solid black; width:100%;margin:0;padding: 0;display: block;">
+ 
+
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+
+    <div class="contact-title">
+        <h2>Contact Me</h2>
+        
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>Email: lokeshlogii1511@gmail.com</p>
+            <p>Phone: 9344191703</p>
+            <p>Location: Tamil Nadu, India</p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <input type="text" placeholder="Subject" required>
+
+            <textarea rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+        <div id="success-msg" style="display:none; color:green; font-size:18px; text-align:center; margin-top:20px;">
+    ✅ Message Sent Successfully!
+</div>
+
+    </div>
+
+</section>
+
+<hr style="border: 1px solid black;">
+  <script src="script.js"></script>
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()"></span>
+    <img id="lightbox-img" src="" alt="Certificate">
+</div>
+</body>
+</html>
