@@ -920,7 +920,12 @@ body > hr {
     }
 
     .hamburger {
+        display: block !important;
         font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: black;
         order: 2;
     }
 
