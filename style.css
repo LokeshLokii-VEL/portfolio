@@ -891,6 +891,9 @@ body > hr {
 
 
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
 
     /* Fix Navbar */
     .navbar {
@@ -913,6 +916,7 @@ body > hr {
     /* Hide contact me button in navbar */
     .contact-me-btn {
         display: none;
+        margin-top:5px;
     }
 
     /* Fix Hero */
@@ -937,10 +941,16 @@ body > hr {
     /* Fix Skills - 2 columns */
     .skills-container {
         grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .skill-card {
         padding: 15px;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .skill-card h3 {
@@ -962,6 +972,15 @@ body > hr {
         font-size: 16px;
         text-align: left;
     }
+    .about-image{
+      text-align: center;
+      width:100%;
+    }
+    .about-image h1,.about-image h2{
+      text-align: center !important;
+     
+    }
+
 
     /* Fix Certificate - 1 column */
     .certificate-container {
