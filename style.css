@@ -900,212 +900,51 @@ body > hr {
 
 /* ===== COMPLETE MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
-
-    /* Body */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px;
-        flex-wrap: wrap;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background: white;
-    }
-
-    .hamburger {
-        display: block !important;
-        font-size: 28px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: black;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: white;
-        padding: 10px 0;
-        list-style: none;
-        gap: 5px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li a {
-        font-size: 18px;
-        padding: 10px 15px;
-        display: block;
-        border-bottom: 1px solid #eee;
-    }
-
-    .contact-btn {
-        display: none;
-    }
-
-    /* Hero */
-    .hero {
-        flex-direction: column;
-        padding: 30px 15px;
-        text-align: left;
-        gap: 30px;
-        margin-top: 0;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    .hero-left {
-        width: 100%;
-        padding: 0;
-    }
-
-    .hero-right {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hexagon {
-        width: 250px !important;
-        height: 250px !important;
-    }
-
-    /* HR line */
-    hr {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* About */
-    .about-container {
-        flex-direction: column;
-        padding: 20px 15px;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .about-image {
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-image img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-text {
-        width: 100%;
-        font-size: 16px;
-        text-align: left;
-    }
-
-    /* Skills */
-    .skills {
-        padding: 20px 15px;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 15px !important;
-        padding: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .skill-card {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 15px !important;
-    }
-
-    .skill-card img {
-        width: 50px !important;
-        height: 50px !important;
-    }
-
-    /* Projects */
-    .projects {
-        padding: 20px 15px;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
-
-    .project-card {
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Certificates section in index.html */
-    .certificates {
-        padding: 20px 15px;
-    }
-
-    /* Contact */
-    .contact {
-        padding: 20px 15px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-info {
-        width: 100% !important;
-    }
-
-    .contact-form {
-        width: 100% !important;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Section titles */
-    .projects-title h2,
-    .skills h2,
-    .about h2,
-    .certificates h2,
-    .contact h2 {
-        font-size: 32px !important;
-        text-align: center;
-    }
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+  }
+  .nav-links.active {
+    display: flex;
+  }
 }
 
-/* Small phones */
+
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 26px;
-    }
+  .hero h1 {
+    font-size: 26px;
+  }
+  .hexagon {
+    width: 200px;
+    height: 200px;
+  }
+}
 
-    .skills-container {
-        grid-template-columns: 1fr 1fr !important;
-    }
 
-    .hexagon {
-        width: 200px !important;
-        height: 200px !important;
-    }
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .projects-container,
+  .certificate-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+  }
 }
