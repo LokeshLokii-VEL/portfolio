@@ -898,25 +898,26 @@ body > hr {
     color: black;
 }
 
+/* ===== COMPLETE MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
-  body{
-    overflow-x: hidden;
-  }
 
-    /* Fix Navbar */
+    /* Body */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
     .navbar {
-         display: flex;
+        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 15px;
         flex-wrap: wrap;
-    }
-
-.logo {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: white;
     }
 
     .hamburger {
@@ -926,124 +927,185 @@ body > hr {
         border: none;
         cursor: pointer;
         color: black;
-        order: 2;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        gap: 10px;
+        background: white;
         padding: 10px 0;
         list-style: none;
-        order:3;
-
+        gap: 5px;
     }
-  
+
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+        border-bottom: 1px solid #eee;
     }
 
     .contact-btn {
         display: none;
     }
 
-    .nav-links a {
-        font-size: 13px;
-    }
- .nav-links li a {
-        font-size: 20px !important;
-        padding: 8px 0 !important;
-        display: block;
-    }
-    /* Hide contact me button in navbar */
-    .contact-me-btn {
-        display: none;
-        margin-top:5px;
-    }
-
-    /* Fix Hero */
+    /* Hero */
     .hero {
         flex-direction: column;
-        padding: 20px 15px;
+        padding: 30px 15px;
         text-align: left;
-        gap: 20px;
+        gap: 30px;
+        margin-top: 0;
     }
 
     .hero h1 {
         font-size: 32px;
+        line-height: 1.2;
     }
 
-    /* Fix Profile Image size */
+    .hero-left {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .hexagon {
         width: 250px !important;
         height: 250px !important;
-        margin: 0 auto;
     }
 
-    /* Fix Skills - 2 columns */
+    /* HR line */
+    hr {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* About */
+    .about-container {
+        flex-direction: column;
+        padding: 20px 15px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text {
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /* Skills */
+    .skills {
+        padding: 20px 15px;
+    }
+
     .skills-container {
         grid-template-columns: 1fr 1fr !important;
         gap: 15px !important;
-        padding: 0 15px !important;
+        padding: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
     .skill-card {
-        padding: 15px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 15px !important;
+    }
+
+    .skill-card img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* Projects */
+    .projects {
+        padding: 20px 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .project-card {
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    .skill-card h3 {
-        font-size: 14px;
+    /* Certificates section in index.html */
+    .certificates {
+        padding: 20px 15px;
     }
 
-    /* Fix Projects - 1 column */
-    .projects-container {
-        grid-template-columns: 1fr !important;
+    /* Contact */
+    .contact {
+        padding: 20px 15px;
     }
 
-    /* Fix About section */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        font-size: 16px;
-        text-align: left;
-    }
-    .about-image{
-      text-align: center;
-      width:100%;
-    }
-    .about-image h1,.about-image h2{
-      text-align: center !important;
-     
-    }
-
-
-    /* Fix Certificate - 1 column */
-    .certificate-container {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Fix HR line */
-    hr {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
-
-    /* Fix Contact */
     .contact-container {
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        width: 100% !important;
+    }
+
+    .contact-form {
+        width: 100% !important;
     }
 
     .contact-form input,
-    .contact-form textarea {
+    .contact-form textarea,
+    .contact-form button {
         width: 100% !important;
-        box-sizing: border-box;
+        box-sizing: border-box !important;
+    }
+
+    /* Section titles */
+    .projects-title h2,
+    .skills h2,
+    .about h2,
+    .certificates h2,
+    .contact h2 {
+        font-size: 32px !important;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .hexagon {
+        width: 200px !important;
+        height: 200px !important;
     }
 }
