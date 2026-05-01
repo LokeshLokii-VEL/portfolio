@@ -934,6 +934,9 @@ body > hr {
   height: 200px;
   border-radius: 50%;
 }
+.about-image h1{
+    text-align: center;
+}
 .about-content {
   max-width: 600px;
 }
@@ -941,17 +944,41 @@ body > hr {
 
 }
 
-
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 26px;
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;       /* stack text + image vertically */
+    text-align: center;           /* center text */
+    padding: 20px 15px;
+    gap: 30px;
   }
+
+  .hero-left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;      /* center the image */
+    margin-top: 20px;
+  }
+
   .hexagon {
-    width: 200px;
-    height: 200px;
+    width: 220px;                 /* smaller image container */
+    height: 220px;
+  }
+
+  .hero h1 {
+    font-size: 28px;              /* scale down heading */
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 16px;              /* smaller description text */
   }
 }
+
 
 
 @media (max-width: 480px) {
@@ -972,8 +999,8 @@ body > hr {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 
@@ -994,7 +1021,7 @@ body > hr {
   .contact-form button {
     width: 100%;
   }
-}
+
 
 .contact-container {
   display: flex;
@@ -1011,4 +1038,5 @@ body > hr {
 .contact-form {
   width: 100%;
   max-width: 500px;         /* keeps form neat in center */
+}
 }
