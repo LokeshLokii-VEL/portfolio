@@ -889,20 +889,23 @@ body > hr {
     box-shadow: 0 5px 15px rgba(255,195,0,0.5);
 }
 
-.hamburger {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: black;
-}
+
 
 /* ===== COMPLETE MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .navbar {
+  display: flex;
+  justify-content: space-between; /* keeps logo left, hamburger right */
+  align-items: center;
+}
   .hamburger {
-    display: block;
-  }
+  margin-left: auto;   /* pushes it to the far right */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
   .nav-links {
     display: none;
     flex-direction: column;
@@ -959,9 +962,18 @@ body > hr {
   gap: 20px;
 }
 .skill-card {
-  width: 90%;
-  max-width: 350px;
+  background: #F8B400;
+  border-radius: 30px;
+  transition: 0.3s;
+  width: 380px;        /* wider */
+  height: 220px;       /* shorter */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 
 }
 
