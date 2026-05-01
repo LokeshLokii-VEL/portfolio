@@ -936,7 +936,7 @@ body > hr {
   border-radius: 50%;
 }
 .about-image h1{
-    padding-right: 20px;
+    padding-left: -20px;
 }
 .about-content {
   max-width: 600px;
@@ -1014,6 +1014,7 @@ body > hr {
   align-items: center;      /* center horizontally */
   text-align: center;       /* center text inside */
   gap: 30px; 
+}
 }
 
 
