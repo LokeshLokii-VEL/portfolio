@@ -8,14 +8,15 @@
 }
 
 body{
-  background:lightgrey;
-  color:black;
-  padding:0 50px;
-  margin: 0;
+ margin: 0;
+  padding: 0;
+  background: lightgrey;
+  color: black;
   overflow-x: hidden;
-  padding-top: 50px;
 }
-
+.hamburger{
+  display: none;
+}
 /* Navbar */
 .navbar{
   display:flex;
@@ -27,6 +28,7 @@ body{
   display:flex;
   align-items:center;
   gap:10px;
+  padding-left: 50px;
 }
 
 .circle{
@@ -40,6 +42,7 @@ body{
   display:flex;
   list-style:none;
   gap:35px;
+   padding: 60px 50px ;
 }
 
 .nav-links a{
@@ -68,8 +71,9 @@ body{
 .hero{
   display:flex;
   justify-content:space-between;
-  margin-top:70px;
   gap:50px;
+    align-items: center;
+    padding: 20px 50px;
 }
 /* Left */
 .hero-left{
@@ -395,6 +399,13 @@ body{
 .skill-card:hover{
     transform:translateY(-8px);
 }
+.skill-car:hover{
+    transform:translateY(-8px);
+}
+.skill-car{
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
 
 .skill-card h3{  
     font-size:25px;
@@ -404,13 +415,42 @@ body{
   width:100%;
   margin-top: -30px; 
 }
+.skill-car{
+    background:#F8B400;
+    border-radius:30px;
+    transition:0.3s;
+    width:300px;
+    height:300px;
+
+    display :flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;
+}
+.skill-car h3{  
+    font-size:25px;
+    /* white line */
+  padding-bottom: 50px;           /* space between text and line */
+  margin-bottom: 15px; 
+  width:100%;
+  margin-top: -30px; 
+}
+.skill-car h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: lightgrey;
+  margin-top: 15px;   /* reduce this value to move line closer */
+}
 .skill-card h3::after {
   content: "";
   display: block;
   width: 100%;
-  height: 8px;
+  height: 6px;
   background-color: lightgrey;
-  margin-top: 30px;   /* reduce this value to move line closer */
+  margin-top: 15px;   /* reduce this value to move line closer */
 }
 
 .skill-card img {
@@ -842,7 +882,7 @@ body > hr {
     background: #2a2a2a;
     border-radius: 15px;
     padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.1s, box-shadow 0.1s;
     border: 1px solid #333;
 }
 
@@ -857,7 +897,7 @@ body > hr {
 /* Hover animation */
 .certificate-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(255, 195, 0, 0.2);
+   
 }
 
 .certificate-card img {
@@ -884,43 +924,98 @@ body > hr {
     transition: 0.3s;
 }
 
-.certificates-btn:hover {
-    background: white;
-    box-shadow: 0 5px 15px rgba(255,195,0,0.5);
-}
+
 
 
 
 /* ===== COMPLETE MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .navbar {
+   body {
+    padding: 0;
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+.navbar {
   display: flex;
   justify-content: space-between; /* keeps logo left, hamburger right */
   align-items: center;
+  position: sticky;   /* keeps it visible */
+    top: 0;             /* sticks to top */
+    z-index: 1000;
+    background: white;  /* solid background so it doesn’t overlap content */
+    padding: 16px 20px;
 }
   .hamburger {
+    display:block;
   margin-left: auto;   /* pushes it to the far right */
-  font-size: 28px;
+  font-size: 34px;
   background: none;
   border: none;
   cursor: pointer;
   color: black;
+  z-index:1100;
 }
+  nav {
+    position: relative;
+  }
   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    border-radius: 10px;
+   display: none;
+  flex-direction: column;
+  position: absolute;
+  top:38px;
+  right: -20px;
+  width: 185px;
+  background: white;
+  padding: 20px 24px;
+  margin: 0;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.14);
+  gap: 22px;
+  z-index: 1050;
+  list-style: none;
+   
   }
   .nav-links.active {
     display: flex;
   }
+  .nav-links li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .nav-links a.active {
+    color:black;
+    border-bottom:2px solid black;
+  }
+.yellow-btn {
+  display: block;
+  margin: 20px auto;   /* auto centers horizontally */
+}
+
+
   .logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
+  padding-left:10px;
+}
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #F8B400 50%, black 50%);
+}
+.logo h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
 .about-container {
@@ -936,13 +1031,29 @@ body > hr {
   border-radius: 50%;
 }
 .about-image h1{
-    padding-left: -40px;
+    padding-left: -100px;
 }
 .about-content {
   max-width: 600px;
 }
 
 
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image h1,
+  .about-image h2 {
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -963,6 +1074,10 @@ body > hr {
     font-size: 28px;
     line-height: 1.2;
   }
+
+
+
+
 
   .desc {
     font-size: 16px;
@@ -1010,17 +1125,20 @@ body > hr {
 }
 @media (max-width: 768px) {
   .certificate-container {
-    grid-template-columns: 1fr;
+    display: flex;              /* use flexbox */
+    flex-direction: column;     /* stack vertically */
+    align-items: center;        /* center horizontally */
+    text-align: center;         /* center text inside */
+    gap: 30px;                  /* spacing between cards */
+    width: 100%;                /* full width on mobile */
   }
 
-  .certificate-container {
-  display: flex;
-  flex-direction: column;   /* stack info + form vertically */
-  align-items: center;      /* center horizontally */
-  text-align: center;       /* center text inside */
-  gap: 30px; 
+  .certificate-card {
+    width: 90%;                 /* make each card uniform */
+    max-width: 350px;           /* limit width for neatness */
+  }
 }
-}
+
 
 
 

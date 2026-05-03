@@ -102,19 +102,27 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
 
+emailjs.init("MVGB-vqV0Q57H_fvR");
 
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    emailjs.sendForm('service_eduk619', 'template_9010qvh', this)
-        .then(function() {
-            document.getElementById('success-msg').style.display = 'block';
-            document.getElementById('contact-form').reset();
-            setTimeout(function() {
-                document.getElementById('success-msg').style.display = 'none';
-            }, 4000);
-        }, function(error) {
-            alert('❌ Failed! Try again.');
-        });
+const contactForm = document.getElementById("contact-form");
+const successMsg = document.getElementById("success-msg");
+
+contactForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_eduk619", "template_9010qvh", this)
+    .then(function() {
+      successMsg.style.display = "block";
+      contactForm.reset();
+
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 4000);
+    })
+    .catch(function(error) {
+      console.log("FAILED", error);
+      alert("Message not sent");
+    });
 });
 
 
@@ -126,5 +134,43 @@ function toggleMenu() {
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     document.querySelector('.nav-links').classList.remove('active');
+  });
+});
+
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuBtn = document.querySelector('.hamburger');
+
+  navLinks.classList.toggle('active');
+
+  if (navLinks.classList.contains('active')) {
+    menuBtn.innerHTML = "✕";
+  } else {
+    menuBtn.innerHTML = "☰";
+  }
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.remove('active');
+    document.querySelector('.hamburger').innerHTML = "☰";
+  });
+});
+
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = "./files/resume.pdf.pdf";
+  link.download = "Lokesh_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function () {
+    this.classList.toggle("clicked");
   });
 });
