@@ -968,7 +968,7 @@ body > hr {
   background: white;
   padding: 20px 24px;
   margin: 0;
-  border-radius: 0 0 18px 18px;
+  border-radius:18px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.14);
   gap: 22px;
   z-index: 1050;
@@ -1134,7 +1134,7 @@ body > hr {
   }
 
   .certificate-card {
-    width: 90%;                 /* make each card uniform */
+    width: 100%;                 /* make each card uniform */
     max-width: 350px;           /* limit width for neatness */
   }
 }
