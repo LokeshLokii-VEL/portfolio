@@ -60,17 +60,7 @@ window.addEventListener("scroll", () => {
 
 
 
-// Contact Form Submit
 
-document.querySelector(".contact-form").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    alert("Message Sent Successfully!");
-
-    this.reset();
-
-});
 
 document.querySelector(".yellow-btn").addEventListener("click", () => {
   window.open("https://www.linkedin.com/in/lokeshloki15", "_blank");
@@ -102,20 +92,19 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
 
-emailjs.init("MVGB-vqV0Q57H_fvR");
+emailjs.init({
+  publicKey: "MVGB-vqV0Q57H_fvR"
+});
 
 const contactForm = document.getElementById("contact-form");
 const successMsg = document.getElementById("success-msg");
 
 contactForm.addEventListener("submit", function(e) {
   e.preventDefault();
-
-
-  document.getElementById("time").value =
-new Date().toLocaleString();
+  document.getElementById("time").value = new Date().toLocaleString();
 
   emailjs.sendForm("service_eduk619", "template_9010qvh", this)
-    .then(function() {
+    .then(() => {
       successMsg.style.display = "block";
       contactForm.reset();
 
@@ -123,12 +112,11 @@ new Date().toLocaleString();
         successMsg.style.display = "none";
       }, 4000);
     })
-    .catch(function(error) {
+    .catch((error) => {
       console.log("FAILED", error);
       alert("Message not sent");
     });
 });
-
 
 function toggleMenu() {
   const navLinks = document.querySelector('.nav-links');
