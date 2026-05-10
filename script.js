@@ -110,6 +110,10 @@ const successMsg = document.getElementById("success-msg");
 contactForm.addEventListener("submit", function(e) {
   e.preventDefault();
 
+
+  document.getElementById("time").value =
+new Date().toLocaleString();
+
   emailjs.sendForm("service_eduk619", "template_9010qvh", this)
     .then(function() {
       successMsg.style.display = "block";
