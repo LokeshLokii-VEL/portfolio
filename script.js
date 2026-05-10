@@ -101,16 +101,13 @@ const successMsg = document.getElementById("success-msg");
 
 contactForm.addEventListener("submit", function(e) {
   e.preventDefault();
+
   document.getElementById("time").value = new Date().toLocaleString();
 
   emailjs.sendForm("service_eduk619", "template_9010qvh", this)
     .then(() => {
-      successMsg.style.display = "block";
+      alert("Message sent successfully!");
       contactForm.reset();
-
-      setTimeout(() => {
-        successMsg.style.display = "none";
-      }, 4000);
     })
     .catch((error) => {
       console.log("FAILED", error);
